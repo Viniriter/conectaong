@@ -1,0 +1,302 @@
+:root {
+    --cor-primaria: #005a8d;
+    --cor-secundaria: #00a8e8;
+    --cor-texto: #333;
+    --cor-fundo: #f4f4f4;
+    --cor-branco: #ffffff;
+    --fonte-principal: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    line-height: 1.6;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* -------------------
+ * Header e Navegação
+ * ------------------- */
+.site-header {
+    background: var(--cor-branco);
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-weight: bold;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--cor-secundaria);
+}
+
+/* -------------------
+ * Main Content & Sections
+ * ------------------- */
+main {
+    padding: 2rem 0;
+}
+
+.section {
+    padding: 2rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Banner da Home */
+.banner {
+    background: url('../img/banner.jpg') no-repeat center center/cover;
+    height: 433px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-branco);
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    color: var(--cor-branco);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* -------------------
+ * Cards (Projetos, Voluntários)
+ * ------------------- */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile-first: 1 coluna */
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--cor-branco);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--cor-primaria);
+}
+
+/* -------------------
+ * Formulários
+ * ------------------- */
+.form {
+    background: var(--cor-branco);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* -------------------
+ * Página de Contato
+ * ------------------- */
+.contact-info {
+    margin-bottom: 2rem;
+}
+
+.icone-contato {
+    vertical-align: middle;
+}
+
+.social-links {
+    display: flex;
+    /* Adiciona um pequeno espaço entre os ícones */
+    gap: 15px;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #eee;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* -------------------
+ * Footer
+ * ------------------- */
+.site-footer {
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* -------------------
+ * Media Queries (Responsividade)
+ * ------------------- */
+
+/* Tablets */
+@media (min-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+
+    .banner-content h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    }
+
+    /* Layout de duas colunas para formulários e contato */
+    .grid-2-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+}
