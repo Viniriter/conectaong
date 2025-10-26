@@ -2,7 +2,7 @@
 
 ## 📖 Sobre o Projeto
 
-**Conecta ONG** é um protótipo de site institucional desenvolvido como parte do projeto acadêmico "Experiência Prática I" para o curso de Desenvolvimento Front-End. O objetivo foi criar uma plataforma web simples e funcional para uma (ONG), aplicando conceitos fundamentais de desenvolvimento com **HTML5, CSS3 e JavaScript puro**, sem o uso de frameworks.
+**Conecta ONG** é um protótipo de site institucional desenvolvido como parte do projeto acadêmico "Experiência Prática II" para o curso de Desenvolvimento Front-End. O objetivo foi criar uma plataforma web simples e funcional para uma (ONG), aplicando conceitos fundamentais de desenvolvimento com **HTML5 e CSS3**, sem o uso de frameworks.
 
 O site foi projetado para ser uma ferramenta de divulgação de projetos, captação de voluntários e comunicação com o público, seguindo as melhores práticas de semântica, responsividade e acessibilidade.
 
@@ -19,7 +19,7 @@ O site foi projetado para ser uma ferramenta de divulgação de projetos, capta�
     -   **Cadastro:** Formulário completo com validação nativa e máscaras de input (CPF, CEP, Telefone) implementadas com JavaScript.
     -   **Contato:** Informações institucionais, formulário de contato e mapa de localização (Google Maps).
 -   **Interatividade com JavaScript:** Validações, máscaras de formulário e interações simples, como alertas de confirmação.
--   **Código Limpo e Organizado:** Estrutura de pastas bem definida, separando HTML, CSS e JavaScript.
+-   **Código Limpo e Organizado:** Estrutura de pastas bem definida, separando HTML e CSS.
 
 ---
 
@@ -27,8 +27,7 @@ O site foi projetado para ser uma ferramenta de divulgação de projetos, capta�
 
 -   **HTML5:** Para a estruturação e semântica do conteúdo.
 -   **CSS3:** Para estilização, layout (Flexbox, Grid) e responsividade (Media Queries).
--   **JavaScript (ES6+):** Para manipulação do DOM, validações de formulário e interatividade.
-
+  
 ---
 
 ## 📂 Estrutura de Pastas
@@ -46,9 +45,6 @@ O projeto está organizado da seguinte forma:
 |
 |-- /css/
 |   |-- style.css
-|
-|-- /js/
-|   |-- script.js
 |
 |-- /img/
 |   |-- banner.jpg
@@ -72,7 +68,7 @@ O projeto está organizado da seguinte forma:
 
 ### Localmente
 
-1.  Clone este repositório: `git clone https://github.com/Viniriter/atv1`
+1.  Clone este repositório: `git clone https://github.com/Viniriter/conectaong`
 2.  Navegue até a pasta do projeto.
 3.  Abra o arquivo `index.html` em seu navegador de preferência.
 
