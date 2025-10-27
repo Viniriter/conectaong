@@ -74,7 +74,7 @@ O projeto está organizado da seguinte forma:
 
 ### Localmente
 
-1.  Clone este repositório: `git clone https://github.com/Viniriter/conectaong`
+1.  Clone este repositório: `git clone https://github.com/Viniriter/conectaong/tree/atividade-3`
 2.  Navegue até a pasta do projeto.
 3.  Abra o arquivo `index.html` em seu navegador de preferência.
 
