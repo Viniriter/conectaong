@@ -1,25 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Foca em funcionalidades da página de cadastro se o formulário existir
+    // --- Lógica para o Theme Switcher (Modo Escuro) ---
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeLabel = document.querySelector('.theme-label');
+    const htmlElement = document.documentElement;
+
+    const applyTheme = (theme) => {
+        htmlElement.setAttribute('data-theme', theme);
+        if (themeToggleBtn && themeLabel) {
+            if (theme === 'dark') {
+                themeToggleBtn.setAttribute('aria-label', 'Alternar para modo claro');
+                themeLabel.textContent = 'Modo Claro';
+            } else {
+                themeToggleBtn.setAttribute('aria-label', 'Alternar para modo escuro');
+                themeLabel.textContent = 'Modo Escuro';
+            }
+        }
+        localStorage.setItem('theme', theme);
+    };
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
+        });
+    }
+
+    // Aplica o tema salvo ou a preferência do sistema ao carregar a página
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(savedTheme);
+
+    // --- Funcionalidades da página de cadastro ---
     const registrationForm = document.getElementById('registration-form');
     if (registrationForm) {
-        // Máscaras para os campos
         const cpfInput = document.getElementById('cpf');
         const telefoneInput = document.getElementById('telefone');
         const cepInput = document.getElementById('cep');
 
-        if (cpfInput) {
-            cpfInput.addEventListener('input', maskCPF);
-        }
-        if (telefoneInput) {
-            telefoneInput.addEventListener('input', maskTelefone);
-        }
-        if (cepInput) {
-            cepInput.addEventListener('input', maskCEP);
-            // Funcionalidade de busca de endereço pelo CEP
-            cepInput.addEventListener('blur', handleCEP);
-        }
-
-        // Lógica de submissão do formulário
+        cpfInput?.addEventListener('input', maskCPF);
+        telefoneInput?.addEventListener('input', maskTelefone);
+        cepInput?.addEventListener('input', maskCEP);
+        cepInput?.addEventListener('blur', handleCEP);
         registrationForm.addEventListener('submit', handleFormSubmit);
     }
 });

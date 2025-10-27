@@ -1,16 +1,30 @@
 :root {
+    /* Tema Claro (Padrão) */
     --cor-primaria: #005a8d;
     --cor-secundaria: #00a8e8;
     --cor-texto: #333;
     --cor-fundo: #f4f4f4;
     --cor-branco: #ffffff;
+    --cor-borda: #ddd;
+    --cor-sombra: rgba(0,0,0,0.1);
     --fonte-principal: 'Arial', sans-serif;
+}
+
+[data-theme="dark"] {
+    --cor-primaria: #00a8e8; /* Azul claro se torna o primário */
+    --cor-secundaria: #0077b6; /* Um azul mais escuro para secundário */
+    --cor-texto: #f4f4f4; /* Texto claro */
+    --cor-fundo: #121212; /* Fundo escuro */
+    --cor-branco: #1e1e1e; /* Superfícies como cards e forms */
+    --cor-borda: #444;
+    --cor-sombra: rgba(255,255,255,0.1);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 html {
@@ -52,7 +66,7 @@ p {
 .site-header {
     background: var(--cor-branco);
     padding: 1rem 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--cor-borda);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -99,7 +113,7 @@ main {
 
 .section {
     padding: 2rem 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--cor-borda);
 }
 
 .section-title {
@@ -136,10 +150,10 @@ main {
 
 .card {
     background: var(--cor-branco);
-    border: 1px solid #ddd;
+    border: 1px solid var(--cor-borda);
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px var(--cor-sombra);
     transition: transform 0.3s ease;
 }
 
@@ -181,7 +195,7 @@ main {
     background: var(--cor-branco);
     padding: 2rem;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px var(--cor-sombra);
 }
 
 .form-group {
@@ -199,7 +213,7 @@ main {
 .form-group select {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--cor-borda);
     border-radius: 5px;
 }
 
@@ -211,7 +225,7 @@ main {
 }
 
 fieldset {
-    border: 1px solid #ccc;
+    border: 1px solid var(--cor-borda);
     padding: 1.5rem;
     border-radius: 5px;
     margin-bottom: 1.5rem;
@@ -263,6 +277,63 @@ legend {
 }
 
 /* -------------------
+ * Theme Switcher
+ * ------------------- */
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.theme-label {
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+    cursor: pointer;
+}
+
+.theme-toggle-btn {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+    position: relative;
+    width: 50px;
+    height: 26px;
+}
+
+.theme-toggle-btn .sun-icon,
+.theme-toggle-btn .moon-icon {
+    font-size: 0.8rem;
+    line-height: 1;
+}
+
+.theme-toggle-btn::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--cor-secundaria);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .theme-toggle-btn::after {
+    transform: translateX(23px);
+}
+
+/* Esconde o label em telas menores para economizar espaço */
+@media (max-width: 768px) {
+    .theme-label {
+        display: none;
+    }
+}
+/* -------------------
  * Footer
  * ------------------- */
 .site-footer {
@@ -271,6 +342,11 @@ legend {
     text-align: center;
     padding: 2rem 0;
     margin-top: 2rem;
+}
+
+[data-theme="dark"] .site-footer {
+    background: #1e1e1e;
+    border-top: 1px solid var(--cor-borda);
 }
 
 /* -------------------
@@ -285,6 +361,10 @@ legend {
 
     .banner-content h1 {
         font-size: 4rem;
+    }
+
+    .site-header .container {
+        flex-wrap: nowrap;
     }
 }
 

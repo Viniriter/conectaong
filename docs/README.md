@@ -23,6 +23,9 @@ O site foi projetado para ser uma ferramenta de divulgação de projetos, capta�
     -   **API de CEP:** Preenchimento automático do endereço ao digitar o CEP, utilizando a API do ViaCEP.
     -   **Manipulação de Formulário:** Confirmação de envio e limpeza dos campos após o cadastro.
 -   **Código Limpo e Organizado:** Estrutura de pastas bem definida, separando HTML, CSS e JavaScript.
+-   **Acessibilidade (WCAG):**
+    -   **Modo Escuro / Alto Contraste:** Implementação de um interruptor de tema que alterna entre os modos claro e escuro, salvando a preferência do usuário para visitas futuras.
+    -   **Uso de Atributos ARIA:** Melhoria da acessibilidade para leitores de tela através de `aria-labels` e outros atributos.
 
 ---
 
@@ -74,7 +77,7 @@ O projeto está organizado da seguinte forma:
 
 ### Localmente
 
-1.  Clone este repositório: `git clone https://github.com/Viniriter/conectaong/tree/atividade-3`
+1.  Clone este repositório: `git clone https://github.com/Viniriter/conectaong/tree/atividade-4`
 2.  Navegue até a pasta do projeto.
 3.  Abra o arquivo `index.html` em seu navegador de preferência.
 
@@ -86,8 +89,8 @@ O projeto pode ser visualizado online através do GitHub Pages. Após fazer o pu
 
 ## 🎨 Personalização
 
-O código foi comentado para facilitar a personalização:
--   **Cores e Fontes:** As cores primárias, secundárias e a fonte principal podem ser facilmente alteradas no início do arquivo `css/style.css`, na seção `:root`.
+O código foi estruturado para facilitar a personalização:
+-   **Cores e Temas:** As cores são gerenciadas por variáveis CSS (`:root`). O site inclui um tema claro (padrão) e um tema escuro (`[data-theme="dark"]`), que podem ser facilmente customizados no arquivo `css/style.css`.
 -   **Imagens:** Substitua as imagens na pasta `/img/` mantendo os nomes dos arquivos ou atualize os caminhos nos arquivos HTML correspondentes.
 
 ---
