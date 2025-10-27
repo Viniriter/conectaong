@@ -2,7 +2,7 @@
 
 ## 📖 Sobre o Projeto
 
-**Conecta ONG** é um protótipo de site institucional desenvolvido como parte do projeto acadêmico "Experiência Prática II" para o curso de Desenvolvimento Front-End. O objetivo foi criar uma plataforma web simples e funcional para uma (ONG), aplicando conceitos fundamentais de desenvolvimento com **HTML5 e CSS3**, sem o uso de frameworks.
+**Conecta ONG** é um protótipo de site institucional desenvolvido como parte de um projeto acadêmico para o curso de Desenvolvimento Front-End. O objetivo foi criar uma plataforma web simples e funcional para uma ONG, aplicando conceitos fundamentais de desenvolvimento com **HTML5, CSS3 e JavaScript puro**, sem o uso de frameworks.
 
 O site foi projetado para ser uma ferramenta de divulgação de projetos, captação de voluntários e comunicação com o público, seguindo as melhores práticas de semântica, responsividade e acessibilidade.
 
@@ -16,10 +16,13 @@ O site foi projetado para ser uma ferramenta de divulgação de projetos, capta�
     -   **Início:** Apresentação da ONG, missão, visão, valores e um banner de destaque.
     -   **Projetos:** Galeria de projetos sociais com descrição e imagens.
     -   **Voluntários:** Seção para engajamento, com oportunidades e depoimentos.
-    -   **Cadastro:** Formulário completo com validação nativa e máscaras de input (CPF, CEP, Telefone) implementadas com JavaScript.
+    -   **Cadastro:** Formulário completo com validação nativa e melhorias de usabilidade.
     -   **Contato:** Informações institucionais, formulário de contato e mapa de localização (Google Maps).
--   **Interatividade com JavaScript:** Validações, máscaras de formulário e interações simples, como alertas de confirmação.
--   **Código Limpo e Organizado:** Estrutura de pastas bem definida, separando HTML e CSS.
+-   **Interatividade com JavaScript:**
+    -   **Máscaras de Input:** Formatação automática para campos de CPF, CEP e Telefone, melhorando a experiência do usuário.
+    -   **API de CEP:** Preenchimento automático do endereço ao digitar o CEP, utilizando a API do ViaCEP.
+    -   **Manipulação de Formulário:** Confirmação de envio e limpeza dos campos após o cadastro.
+-   **Código Limpo e Organizado:** Estrutura de pastas bem definida, separando HTML, CSS e JavaScript.
 
 ---
 
@@ -27,7 +30,7 @@ O site foi projetado para ser uma ferramenta de divulgação de projetos, capta�
 
 -   **HTML5:** Para a estruturação e semântica do conteúdo.
 -   **CSS3:** Para estilização, layout (Flexbox, Grid) e responsividade (Media Queries).
-  
+ -   **JavaScript (ES6+):** Para interatividade, manipulação do DOM, validações de formulário e consumo de APIs.
 ---
 
 ## 📂 Estrutura de Pastas
@@ -53,6 +56,9 @@ O projeto está organizado da seguinte forma:
 |   |-- projeto3.jpg
 |   |-- certificado.jpg
 |   |-- voluntario.jpg
+|
+|-- /js/
+|   |-- script.js
 |
 |-- /assets/
 |   |-- /icons/
@@ -88,7 +94,7 @@ O código foi comentado para facilitar a personalização:
 
 ## 👨‍💻 Autor
 
-**Vinícius Riter de Faria**
+**Vinícius Riter de Faria** - [GitHub](https://github.com/Viniriter)
 
 *Projeto desenvolvido para a disciplina de Desenvolvimento Front-End Para Web.*
 
